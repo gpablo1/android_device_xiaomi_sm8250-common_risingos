@@ -47,6 +47,8 @@ persist.device_config.runtime_native.usap_pool_enabled=true
  ro.audio.resampler.psd.tbwcheat=0
  persist.bluetooth.sbc_hd_higher_bitrate=1
 
-
  # LMK
  ro.config.low_ram=false
+
+  # Disable Skia tracing by default
+ debug.hwui.skia_atrace_enabled=false
