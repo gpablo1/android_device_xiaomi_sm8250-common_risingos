@@ -239,6 +239,7 @@ persist.vendor.ims.disableQXDMLogs=1
 debug.stagefright.c2inputsurface=-1
 ro.odm.build.media_performance_class=30
 vendor.media.omx=0
+persist.mm.enable.prefetch=true
 
 # NFC
 ro.camera.notify_nfc=1
