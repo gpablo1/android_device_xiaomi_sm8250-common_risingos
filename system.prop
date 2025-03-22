@@ -82,6 +82,9 @@ persist.device_config.runtime_native.usap_pool_enabled=true
  persist.log.tag.ContrastColorUtil=S
  persist.log.tag.OpenGLRenderer=S
 
+#Disbale FPS capping for games
+debug.graphics.game_default_frame_rate.disabled=true
+
  # RIL Powersaving
  persist.radio.add_power_save=1
  pm.sleep_mode=1
