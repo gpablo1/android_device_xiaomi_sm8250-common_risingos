@@ -141,6 +141,7 @@ ro.soc.model=SM8250
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.options=::v2
 
 # Dexopt
  pm.dexopt.first-boot=quicken
