@@ -1,4 +1,3 @@
-@ -0,0 +1,32 @@
  /*
   * Copyright (C) 2020 Paranoid Android
   *
