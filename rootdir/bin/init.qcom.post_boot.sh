@@ -3485,7 +3485,7 @@ case "$target" in
             echo 4-7     > /dev/cpuset/foreground/boost/cpus
             echo 0-2,4-7 > /dev/cpuset/foreground/cpus
             echo 0-7     > /dev/cpuset/top-app/cpus
-
+            echo 1-2     > /dev/cpuset/audio-app/cpus
 
             # configure governor settings for little cluster
             echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
