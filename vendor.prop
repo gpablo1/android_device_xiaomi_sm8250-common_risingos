@@ -269,6 +269,7 @@ vendor.power.pasr.enabled=false
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+vendor.perf.framepacing.enable=1
 
 # Pre-rendering
 ro.vendor.perf.scroll_opt=true
