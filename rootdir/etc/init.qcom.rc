@@ -46,6 +46,10 @@ on early-init
     mkdir /dev/stune
     mount cgroup none /dev/stune nodev noexec nosuid schedtune
 
+    # Workarround for cache
+    rm /data/resource-cache
+    rm /data/system/package_cache
+
  on boot
     chown system system /dev/cpuset/cgroup.procs
     chown system system /dev/cpuset/foreground/cgroup.procs
