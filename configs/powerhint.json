@@ -28,6 +28,15 @@
       ],
       "ResetOnInit": true
     },
+     {
+       "Name": "CPULittleClusterGovernor",
+       "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+       "Values": [
+         "schedutil",
+         "powersave"
+       ],
+       "ResetOnInit": true
+     },
     {
       "Name": "CPUBigClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
@@ -60,6 +69,15 @@
       "ResetOnInit": true
     },
     {
+       "Name": "CPUBigClusterGovernor",
+       "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_governor",
+       "Values": [
+         "schedutil",
+         "powersave"
+       ],
+       "ResetOnInit": true
+     },
+    {
       "Name": "CPUBigPlusClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq",
       "Values": [
@@ -91,6 +109,15 @@
       ],
       "ResetOnInit": true
     },
+    {
+       "Name": "CPUBigPlusClusterGovernor",
+       "Path": "/sys/devices/system/cpu/cpufreq/policy7/scaling_governor",
+       "Values": [
+         "schedutil",
+         "powersave"
+       ],
+       "ResetOnInit": true
+     },
     {
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/max_pwrlevel",
@@ -400,6 +427,24 @@
       "Duration": 0,
       "Value": "2597"
     },
+    {
+       "PowerHint": "INTERACTIVE",
+       "Node": "CPULittleClusterGovernor",
+       "Duration": 0,
+       "Value": "schedutil"
+     },
+     {
+       "PowerHint": "INTERACTIVE",
+       "Node": "CPUBigClusterGovernor",
+       "Duration": 0,
+       "Value": "schedutil"
+     },
+     {
+       "PowerHint": "INTERACTIVE",
+       "Node": "CPUBigPlusClusterGovernor",
+       "Duration": 0,
+       "Value": "schedutil"
+     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
