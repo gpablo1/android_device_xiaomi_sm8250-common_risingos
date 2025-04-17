@@ -201,6 +201,24 @@ on boot
 on property:persist.vendor.sys.fp.fod.large_field=1
     write sys/bus/i2c/devices/3-0049/fod_area 1
 
+    # KCal
+     chown system system /sys/module/msm_drm/parameters/kcal_cont
+     chown system system /sys/module/msm_drm/parameters/kcal_hue
+     chown system system /sys/module/msm_drm/parameters/kcal_sat
+     chown system system /sys/module/msm_drm/parameters/kcal_val
+     chown system system /sys/module/msm_drm/parameters/kcal_red
+     chown system system /sys/module/msm_drm/parameters/kcal_green
+     chown system system /sys/module/msm_drm/parameters/kcal_blue
+
+     chmod 0660 /sys/module/msm_drm/parameters/kcal_cont
+     chmod 0660 /sys/module/msm_drm/parameters/kcal_hue
+     chmod 0660 /sys/module/msm_drm/parameters/kcal_sat
+     chmod 0660 /sys/module/msm_drm/parameters/kcal_val
+     chmod 0660 /sys/module/msm_drm/parameters/kcal_red
+     chmod 0660 /sys/module/msm_drm/parameters/kcal_green
+     chmod 0660 /sys/module/msm_drm/parameters/kcal_blue
+
+
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
