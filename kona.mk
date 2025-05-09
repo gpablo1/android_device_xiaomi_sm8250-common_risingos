@@ -438,9 +438,6 @@ PRODUCT_BOOT_JARS += \
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
 
-PRODUCT_COPY_FILES += \
-    device/xiaomi/sm8250-common/rootdir/etc/init.clear_intelligence.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.clear_intelligence.rc
-
 # Ejecutar script para limpiar datos de SettingsIntelligence tras el arranque
 PRODUCT_COPY_FILES += \
     device/xiaomi/sm8250-common/clear_intelligence.sh:system/bin/clear_intelligence.sh
