@@ -1,2 +1,3 @@
 #!/system/bin/sh
-pm clear com.google.android.settings.intelligence
+sleep 10
+rm -rf /data/user/0/com.google.android.settings.intelligence
