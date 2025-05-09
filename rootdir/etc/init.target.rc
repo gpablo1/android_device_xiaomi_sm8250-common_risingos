@@ -113,13 +113,15 @@ on post-fs
 on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
-service clear_intelligence /system/bin/sh /system/bin/clear_intelligence.sh
-    class late_start
+service clear_settings_intelligence /system/bin/rm -rf /data/user/0/com.google.android.settings.intelligence
+    class main
     user root
     oneshot
+    disabled
+    seclabel u:r:init:s0
 
 on post-fs-data
-    exec_start clear_intelligence
+    start clear_settings_intelligence
     mkdir /vendor/data/tombstones 0771 system system
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
