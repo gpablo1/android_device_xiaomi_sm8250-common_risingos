@@ -292,6 +292,7 @@ on property:vendor.audio.cit.spkcal.copy=true
 
 service audioshell_service /vendor/bin/audioshell_service
     oneshot
+    user system
     disabled
 
 on property:ro.vendor.miui.region=*
@@ -324,11 +325,13 @@ service vendor.per_proxy /vendor/bin/pm-proxy
 
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
+    user system
     group system wakelock
     disabled
 
 service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
     class core
+    user system
     oneshot
 
 on property:init.svc.vendor.per_mgr=running
