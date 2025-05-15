@@ -1,5 +1,0 @@
-type mst_test_app_vendor, domain;
-typeattribute mst_test_app_vendor mlstrustedsubject;
-init_daemon_domain(mst_test_app_vendor)
-allow mst_test_app_vendor self:process { fork execmem };
-allow mst_test_app_vendor tmpfs:file read_file_perms;
