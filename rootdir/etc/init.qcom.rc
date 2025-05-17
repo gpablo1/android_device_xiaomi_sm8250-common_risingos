@@ -544,7 +544,6 @@ service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
     #   user wifi
     #   group wifi inet keystore
     class main
-    user root
     socket wigig/wpa_wigig0 dgram 660 wifi wifi
     disabled
     oneshot
@@ -577,49 +576,41 @@ service vendor.sensingdaemon /vendor/bin/sensingdaemon
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
     class late_start
-    user system
     disabled
     oneshot
 
 service dhcpcd_bond0 /system/bin/dhcpcd -ABKLG
     class late_start
-    user system
     disabled
     oneshot
 
 service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
     class late_start
-    user system
     disabled
     oneshot
 
 service dhcpcd_wigig0 /system/bin/dhcpcd -ABKLG
     class late_start
-    user system
     disabled
     oneshot
 
 service iprenew_wlan0 /system/bin/dhcpcd -n
     class late_start
-    user system
     disabled
     oneshot
 
 service iprenew_bond0 /system/bin/dhcpcd -n
     class late_start
-    user system
     disabled
     oneshot
 
 service iprenew_p2p /system/bin/dhcpcd -n
     class late_start
-    user system
     disabled
     oneshot
 
 service iprenew_wigig0 /system/bin/dhcpcd -n
     class late_start
-    user system
     disabled
     oneshot
 
@@ -658,13 +649,11 @@ on property:sys.shutdown.requested=*
 
 service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
     class late_start
-    user system
     disabled
     oneshot
 
 service iprenew_bt-pan /system/bin/dhcpcd -n
     class late_start
-    user system
     disabled
     oneshot
 
@@ -807,7 +796,6 @@ on property:persist.vendor.radio.diag_log_trriger=audio
 service qlogd /system/xbin/qlogd
     socket qlogd stream 0662 system system
     class main
-    user system
     disabled
 on property:persist.sys.qlogd=1
     start qlogd
@@ -892,7 +880,6 @@ on property:ro.vendor.radio.noril=*
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
-    user system
     group system
     disabled
     oneshot
@@ -916,7 +903,6 @@ on property:vendor.chre.enabled=0
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
-    user root
     disabled
     oneshot
     keycodes 114 115 116
